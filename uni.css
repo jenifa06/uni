@@ -1,0 +1,111 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3d59;
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.navbar .login-box input {
+  padding: 4px;
+  margin-right: 5px;
+}
+
+.banner {
+  background: url("assets/banner.jpg") center/cover no-repeat;
+  height: 300px;
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  margin-top: 60px;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
+}
+
+.gallery img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+/* Introduction */
+.intro {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Form */
+form {
+  background: white;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+legend {
+  font-weight: bold;
+  color: #1e3d59;
+}
+
+/* Calculators */
+.calculators {
+  text-align: center;
+  background: #eef2f3;
+  padding: 20px;
+}
+
+.calc-box {
+  background: white;
+  display: inline-block;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 90%;
+  }
+  .navbar nav {
+    display: none;
+  }
+}
