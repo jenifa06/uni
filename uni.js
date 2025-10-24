@@ -1,4 +1,4 @@
-// Plain JavaScript: BMI Calculator
+
 function calculateBMI() {
   let w = parseFloat(document.getElementById("weight").value);
   let h = parseFloat(document.getElementById("height").value);
@@ -6,20 +6,20 @@ function calculateBMI() {
     let bmi = (w / (h * h)).toFixed(2);
     document.getElementById("bmiResult").innerText = "Your BMI: " + bmi;
   } else {
-    alert("Please enter valid values!");
+    alert("Please enter valid numbers!");
   }
 }
 
-// jQuery: Currency Converter
-$(document).ready(function() {
-  $("#inr").on("keyup change", function() {
+// ✅ jQuery: Currency Converter (₹ → $)
+$(document).ready(function () {
+  $("#inr").on("keyup change", function () {
     let inr = parseFloat($(this).val()) || 0;
-    let usd = (inr / 83.0).toFixed(2); // sample rate
-    $("#usdValue").text(usd);
+    let usd = (inr / 83.0).toFixed(2);
+    $("#usdValue").text("$" + usd);
   });
 });
 
-// Form Progress Tracker
+// ✅ Progress Bar Updates as form fields are filled
 const inputs = document.querySelectorAll("#regForm input, #regForm select, #regForm textarea");
 const progress = document.getElementById("formProgress");
 
@@ -31,8 +31,9 @@ inputs.forEach(input => {
   });
 });
 
-// Login alert
-document.getElementById("loginBtn").addEventListener("click", function() {
+// ✅ Login popup message
+document.getElementById("loginBtn").addEventListener("click", () => {
   let user = document.getElementById("username").value;
-  alert("Welcome, " + user + "!");
+  if (user.trim() !== "") alert("Welcome, " + user + " 🎉");
+  else alert("Please enter your username!");
 });
